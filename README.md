@@ -35,16 +35,7 @@ possible that the comparison method wouldn't work as well with datatypes like st
 a type of object that requires something like a lexicographic ordering that requires attributes
 of an object to be compared based on a hierarchy. 
 
-For the second claim, it would be difficult to disprove if the program scaled linearly or not without
-being able to see the source code. We could verify whether or not it is faster than other algorithms 
-though. I would approach this issue by testing the run time of the program with varied input size. 
-I would do this in a similar way to the comparisons in the sorting comparison lecture, comparing to 
-quicksort. My main goal see how the program behaves when the input gets large. If it consistently 
-ran significantly faster than quicksort, there would be evidence to suggest that the time complexity 
-is $O(n)$, or at least faster than any algorithm we know of. This test is not perfect, unfortunately.
-We don't know the memory complexity or additional constants of the time complexity. In other words, 
-we can't completely disprove the claim without knowing the implementation, but we would be able 
-to verify if it is "faster than any known general sorting algorithm," in practice. 
+For the second claim, I would do several run time tests with varied input sizes. If the program really does scale linearly, the run time should increase proportionally to the input size for the most part. If n gets too large, the code could slow down due to lack of memory. Prior to that, I should be able to verify this claim by seeing if the relationship is roughly linear. 
 
 ### Theoretical Argument
 
